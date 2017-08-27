@@ -37,7 +37,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'chatterbot.ext.django_chatterbot',
+    'aryabot',
 ]
+
+# ChatterBot settings
+
+CHATTERBOT = {
+    'name': 'Django ChatterBot Example',
+    'trainer': 'chatterbot.trainers.ChatterBotCorpusTrainer',
+    'training_data': [
+        'chatterbot.corpus.english.greetings'
+    ],
+    'django_app_name': 'django_chatterbot'
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
